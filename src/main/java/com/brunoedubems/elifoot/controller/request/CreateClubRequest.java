@@ -1,23 +1,25 @@
 package com.brunoedubems.elifoot.controller.request;
 
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDate;
+
 @Getter
 @Setter
-@NoArgsConstructor
 @AllArgsConstructor
-public class CreateStadiumRequest {
+@NoArgsConstructor
+public class CreateClubRequest {
 
     @NotBlank
     private String name;
-
-    @NotBlank
-    private String city;
-    private Integer capacity;
-    private  String urlImg;
+    @NotNull
+    private LocalDate founded;
+    private String urlImg;
+    private Long stadiumId;
 
 }
